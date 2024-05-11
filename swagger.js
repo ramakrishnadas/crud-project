@@ -5,7 +5,7 @@ const doc = {
     title: "Courses API",
     description: "Get, create, update, and delete course information."
   },
-  host: "localhost:3000"
+  host: "crud-project-przo.onrender.com"
 };
 
 const outputFile = "./swagger-output.json";

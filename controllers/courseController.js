@@ -94,7 +94,7 @@ const updateCourse = async (req, res, next) => {
 
         if (result.modifiedCount === 1) {
             // Document updated successfully
-            res.status(200).json({ message: "Course updated successfully" });
+            res.status(204).json({ message: "Course updated successfully" });
         } else {
             // Document not found or no changes made
             res.status(404).json({ message: "Course not found or no changes made" });
@@ -124,7 +124,7 @@ const deleteCourse = async (req, res, next) => {
         // Check the result to see if the delete was successful
         if (result.deletedCount === 1) {
             // Document deleted successfully
-            return res.status(200).json({ message: "Course deleted successfully" });
+            return res.status(204).json({ message: "Course deleted successfully" });
         } else {
             // Document not found or no changes made
             return res.status(404).json({ message: "Course not found or no changes made" });
