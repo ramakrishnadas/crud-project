@@ -16,7 +16,7 @@ app
     .use("/courses", routes);
 
 app.get("/", (req, res) => {
-    res.send("Please include the following path after the site URL to access the API Documentation: /api-docs.");
+    res.send("Please include the following path after the site URL to access the API Documentation: '/api-docs.'");
 })
 
 mongodb.initDb((err, mongodb) => {
