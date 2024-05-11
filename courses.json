@@ -1,0 +1,72 @@
+[
+    {
+      "courseCode": "CSCI101",
+      "courseName": "Introduction to Programming",
+      "credits": 3,
+      "courseDescription": "An introductory course covering the fundamentals of programming logic and problem-solving techniques using a high-level programming language.",
+      "instructor": "John Smith"
+    },
+    {
+      "courseCode": "CSCI204",
+      "courseName": "Data Structures and Algorithms",
+      "credits": 4,
+      "courseDescription": "This course explores advanced data structures and algorithms, including arrays, linked lists, trees, and sorting and searching algorithms.",
+      "instructor": "Emily Johnson"
+    },
+    {
+      "courseCode": "CSCI310",
+      "courseName": "Object-Oriented Programming",
+      "credits": 3,
+      "courseDescription": "A comprehensive study of object-oriented programming principles, design patterns, and their application in software development.",
+      "instructor": "Michael Brown"
+    },
+    {
+      "courseCode": "CSCI420",
+      "courseName": "Database Management Systems",
+      "credits": 3,
+      "courseDescription": "Introduction to the design and implementation of database management systems, including relational database models and SQL programming.",
+      "instructor": "Rachel Martinez"
+    },
+    {
+      "courseCode": "CSCI525",
+      "courseName": "Web Development",
+      "credits": 4,
+      "courseDescription": "An in-depth exploration of web development technologies, including HTML, CSS, JavaScript, and server-side scripting languages.",
+      "instructor": "David Wilson"
+    },
+    {
+      "courseCode": "CSCI632",
+      "courseName": "Software Engineering",
+      "credits": 4,
+      "courseDescription": "This course covers software development methodologies, requirements analysis, design principles, and project management techniques.",
+      "instructor": "Jessica Lee"
+    },
+    {
+      "courseCode": "CSCI740",
+      "courseName": "Artificial Intelligence",
+      "credits": 3,
+      "courseDescription": "An introduction to the theory and techniques of artificial intelligence, including search algorithms, machine learning, and natural language processing.",
+      "instructor": "Brian Thompson"
+    },
+    {
+      "courseCode": "CSCI810",
+      "courseName": "Parallel and Distributed Computing",
+      "credits": 3,
+      "courseDescription": "This course explores parallel and distributed computing paradigms, including multi-threading, multiprocessing, and distributed systems.",
+      "instructor": "Samantha Davis"
+    },
+    {
+      "courseCode": "CSCI920",
+      "courseName": "Cybersecurity",
+      "credits": 3,
+      "courseDescription": "An overview of cybersecurity principles, cryptography, network security, and ethical hacking techniques.",
+      "instructor": "Andrew Garcia"
+    },
+    {
+      "courseCode": "CSCI990",
+      "courseName": "Software Testing and Quality Assurance",
+      "credits": 3,
+      "courseDescription": "This course covers software testing methodologies, quality assurance processes, and tools for ensuring software reliability and correctness.",
+      "instructor": "Sarah Clark"
+    }
+  ]
