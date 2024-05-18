@@ -27,8 +27,6 @@ app.get("/", (req, res) => {
     res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
 });
 
-app.get('/login', (req, res) => res.oidc.login({ returnTo: '/api-docs' }));
-
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app
