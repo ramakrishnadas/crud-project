@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Courses API",
-    "description": "Get, create, update, and delete course information.",
+    "description": "Get, create, update, and delete course information. Authentication is needed to create, update and delete courses. You may log in using OAuth.\n\nLog in by following this path: https://crud-project-przo.onrender.com/login\n\nLog out by following this path: https://crud-project-przo.onrender.com/logout",
     "version": "1.0.0"
   },
   "host": "crud-project-przo.onrender.com",
@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "Display API Documentation path.",
+        "description": "Display whether user is logged in or logged out.",
         "responses": {
           "200": {
             "description": "OK"
@@ -21,9 +21,22 @@
         }
       }
     },
+    "/courses/profile": {
+      "get": {
+        "description": "Get authenticated user's profile.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "UnauthorizedError: Authentication is required for this route."
+          }
+        }
+      }
+    },
     "/courses/": {
       "get": {
-        "description": "Get information of all courses available.",
+        "description": "Get information of all courses available. Does not require authentication.",
         "produces": [
           "application/json"
         ],
@@ -37,7 +50,7 @@
         }
       },
       "post": {
-        "description": "Create a new course.",
+        "description": "Create a new course. Requires authentication (OAuth).",
         "produces": [
           "application/json"
         ],
@@ -68,6 +81,9 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "201": {
             "description": "Created"
           },
@@ -79,13 +95,16 @@
           },
           "500": {
             "description": "Internal Server Error"
+          },
+          "401": {
+            "description": "UnauthorizedError: Authentication is required for this route."
           }
         }
       }
     },
     "/courses/{courseId}": {
       "get": {
-        "description": "Get information of a single course by passing in the course ID.",
+        "description": "Get information of a single course by passing in the course ID. Does not require authentication.",
         "produces": [
           "application/json"
         ],
@@ -112,7 +131,7 @@
     },
     "/courses/{id}": {
       "put": {
-        "description": "Update a course by passing in the course ID.",
+        "description": "Update a course by passing in the course ID. Requires authentication (OAuth).",
         "parameters": [
           {
             "name": "id",
@@ -146,6 +165,9 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "204": {
             "description": "No Content"
           },
@@ -160,11 +182,14 @@
           },
           "500": {
             "description": "Internal Server Error"
+          },
+          "401": {
+            "description": "UnauthorizedError: Authentication is required for this route."
           }
         }
       },
       "delete": {
-        "description": "Delete a course by passing in the course ID.",
+        "description": "Delete a course by passing in the course ID. Requires authentication (OAuth).",
         "parameters": [
           {
             "name": "id",
@@ -174,6 +199,9 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "204": {
             "description": "No Content"
           },
@@ -185,6 +213,9 @@
           },
           "500": {
             "description": "Internal Server Error"
+          },
+          "401": {
+            "description": "UnauthorizedError: Authentication is required for this route."
           }
         }
       }
